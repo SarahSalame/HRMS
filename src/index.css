@@ -1,8 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
 @import "tailwindcss";
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
+   font-family: 'Nunito', sans-serif;
 }
-button, input[type="checkbox"], label[for] {
+button,
+input[type="checkbox"],
+label[for] {
   cursor: pointer;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+/* Scrollbar hidden but scrollable */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.react-calendar {
+  border: none;
+  background-color: transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.react-calendar__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.react-calendar__navigation__label {
+  color: #D0AC2B;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+.react-calendar__navigation button {
+  background: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #999;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.3rem;
+}
+
+.react-calendar__tile {
+  height: 40px;
+  max-width: 40px;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.85rem;
+  color: #333;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.react-calendar__tile--now {
+  background: #e0f7ff;
+  color: #029fae;
+  font-weight: bold;
+}
+
+.react-calendar__tile--active {
+  background: #029fae;
+  color: white;
+}
+
+.highlighted-day {
+  background: #029fae !important;
+  color: white !important;
+  font-weight: bold;
+}
+.in-range {
+  background-color: #e8f4fd !important;
+  color: #111827 !important;
+}
+.input-style {
+  @apply w-full rounded border h-[48px] text-sm bg-white focus:outline-none;
+  border-color: #cfcfcf;
+  padding-left: 16px;
+  color: #000;
+}
+
+.input-style::placeholder {
+  color: rgba(0, 0, 0, 0.5);
 }
